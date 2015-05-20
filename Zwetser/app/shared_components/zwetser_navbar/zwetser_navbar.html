@@ -1,0 +1,30 @@
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top"> 
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class="pull-left marginleft">
+                <img class="img" width="320px" height="90px" src="src/zwetserlogo.png"/>                
+                <angucomplete id="ex1" ng-show="isLoggedIn()"
+                              placeholder="Search users"
+                              pause="250"
+                              selectedobject="selectedUser"
+                              localdata="users"
+                              searchfields="name,email,username"
+                              titlefield="name"
+                              minlength="1"
+                              inputclass="form-control form-control-small" />
+
+            </div>     
+        </div>
+        <ul  ng-show="isLoggedIn()" class="nav navbar-nav navbar-right navbar-avatar" style='background: url({{sessionUser.avatar}}) center center no-repeat'>
+            <li class="dropdown">
+                <!--<img class="img-thumbnail" width="100px" height="100px" ng-src="{{sessionUser.avatar}}"/>-->
+                <a href="" class="dropdown-toggle navbar firstlink" data-toggle="dropdown" role="button" aria-expanded="false"><strong>{{sessionUser.username}}</strong><span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ui-sref="profile">Profile</a></li>
+                    <li><a ng-click="logout()">Log Out</a></li>                            
+                </ul>
+            </li>
+        </ul>    
+</nav>           

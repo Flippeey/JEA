@@ -1,0 +1,6 @@
+<div ng-class="{tweet: tab > 0}" ng-click="clickedTweet(t)">
+    <blockquote >
+        <p id="tweetmessage">{{t.message}}</p>
+        <footer><cite>{{t.screenName}} from {{t.postedFrom}}</cite> | {{t.postDate| date:'dd/MM/yyyy HH:mm:ss'}}</footer>
+    </blockquote>
+</div>

@@ -1,0 +1,13 @@
+<form role="form" >
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input  ng-model="username" type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input ng-model="password" type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <p>{{status}}</p>
+    <input type="submit" class="btn btn-default" ng-click="login(username, password)" value="Login"/>
+    <input type="submit" class="btn btn-default" ng-click="importTweets()" value="Import tweets"/>
+</form>

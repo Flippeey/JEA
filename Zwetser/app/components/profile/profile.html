@@ -1,0 +1,33 @@
+<zw-Navbar></zw-Navbar>
+<div>
+    <div class="left-block col-md-2 marginleft">
+        <user-info></user-info>      
+        <br>
+        <user-details></user-details>
+        <br>    
+        <user-stats></user-stats>
+    </div>
+    <div class="container col-md-7 center-block" >         
+        <ul class="nav nav-tabs">
+            <li ng-class="{ active: isSelected(1) }">
+                <a href ng-click="selectTab(1)" >Timeline</a> 
+            </li>
+            <li ng-class="{ active: isSelected(2) }">
+                <a href ng-click="selectTab(2)" >Your Zweets</a>
+            </li>
+            <li ng-class="{ active: isSelected(3) }">
+                <a href ng-click="selectTab(3)" >@Mentions</a>
+            </li>
+            <li ng-class="{ active: isSelected(4) }" ng-show="isModerator">
+                <a href ng-click="selectTab(4)" >All Tweets (MOEDERATOR)</a>
+            </li>
+        </ul> 
+        <time-line></time-line>
+    </div>
+    <div class="right-block col-md-2">
+        <user-follow></user-follow>
+        <br>
+        <div><sockets></sockets></div>
+
+    </div>
+</div>

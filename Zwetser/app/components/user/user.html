@@ -1,0 +1,17 @@
+<zw-navbar></zw-navbar>
+<div class="left-block col-md-2 marginleft">
+    <user-info></user-info>      
+    <br>
+    <user-details></user-details>
+    <br>    
+    <user-stats></user-stats>
+</div>
+<div class="container col-md-7 center-block">
+    <div ng-repeat="t in user.tweets| orderBy : 'postDate' : true">
+        <user-tweet></user-tweet>
+    </div>
+</div>
+<div class="right-block col-md-2">
+    <user-options></user-options>
+    <user-follow></user-follow>
+</div>

@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Options</h3>
+    </div>
+    <div class="panel-body">
+        <form>
+            <input ng-show="canFollow()" class="btn btn-default pull-left" type="submit" value="Follow" ng-click="followUser()" />
+            <input ng-hide="canFollow()" class="btn btn-default pull-left" type="submit" value="Unfollow" ng-click="unFollowUser()" />
+        </form>
+    </div>
+</div>

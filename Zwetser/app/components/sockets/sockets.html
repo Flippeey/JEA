@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Websocket Echo</h3>
+    </div>
+    <div class="panel-body">
+        Enter text:<input ng-model="input" type="text"/> 
+        <button id="sendButton" class="btn btn-default" ng-click='doSend(input);'>send</button>
+        <button id="closeButton" class="btn btn-default" ng-click='onClose();'>disconnect</button>
+        <div class="outputfield">{{output}}</div>
+    </div>
+</div>

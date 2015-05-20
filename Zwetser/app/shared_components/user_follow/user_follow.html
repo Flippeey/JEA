@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+    <h3 class="panel-heading panel-title">Followers</h3>
+    <span ng-show="user.followers.length === 0">{{nofollowers}}</span>
+    <div class="list-group-item" ng-repeat="follower in user.followers">
+        <a class="btn btn-navbar" ng-click="goToUser(follower.id)"><img class="img-thumbnail" width="75px" height="75px" ng-src="{{follower.avatar}}"/>
+            {{follower.username}}</a>
+    </div>
+</div>
+<div class="panel panel-default">
+    <h3 class="panel-heading panel-title">Following</h3>
+    <span ng-show="user.following.length === 0">{{nofollowing}}</span>
+    <div class="list-group-item" ng-repeat="followed in user.following">
+        <a class="btn btn-navbar" ng-click="goToUser(followed.id)"><img class="img-thumbnail" width="75px" height="75px" ng-src="{{followed.avatar}}"/>
+            {{followed.username}}</a>
+    </div>
+</div>

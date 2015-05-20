@@ -1,0 +1,19 @@
+<div class="form-group tweetform">
+    <form novalidate>             
+        <input ng-model="tweet.message" class="form-control" type="text"  placeholder="Share your thoughts..." /> 
+        <input class="btn btn-default pull-right" type="submit" value="Post" ng-click="postTweet()" />
+    </form>
+    <br>
+</div>
+<div>
+    <div ng-show="tweet.message">
+        <p>{{tweet.message.length}} of 140 characters used.</p>
+        <blockquote class="tweet" >
+            <p>{{tweet.message}}</p>
+            <footer><cite>{{tweet.screenName}} from {{tweet.postedFrom}}</cite> | {{tweet.postDate| date:'dd/MM/yyyy HH:mm:ss'}}</footer>
+        </blockquote>
+    </div>
+    <div ng-repeat="t in tweets| orderBy : 'postDate' : true">
+        <user-tweet></user-tweet>
+    </div>
+</div>
